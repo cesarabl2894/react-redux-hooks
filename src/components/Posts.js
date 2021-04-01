@@ -12,14 +12,13 @@ const PostItem = props => {
     )
 }
 
-
 function Posts() {
     const posts = useSelector(state => state.posts.items);
     const dispatch = useDispatch();
     
     useEffect(() => {
         dispatch(fetchPosts());
-    });
+    },[dispatch]);
 
     
     return (
